@@ -30,11 +30,19 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Controllers\MapController.js" />
+    <Compile Include="Controllers\GoogleMapController.js" />
+    <Compile Include="Controllers\MapController.js" />
+    <Compile Include="Dal\MsSqlProvider.js" />
     <Compile Include="server.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="Views\index.ejs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Dal\" />
+    <Folder Include="Views\" />
     <Folder Include="typings\" />
     <Folder Include="typings\globals\" />
     <Folder Include="typings\globals\node\" />

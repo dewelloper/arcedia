@@ -1,13 +1,26 @@
-﻿var http = require('http');
+﻿var express = require('express');
+var path = require("path");
+var bodyParser = require("body-parser");
+
+
+var app = express();
+
+//config
+app.set("view engine", 'ejs');
+app.set("views", path.join(__dirname, "views"));
+app.set("model", path.join(__dirname, "Dal"));
+
+//midleware
+app.use(bodyParser());
+app.use(express.static(path.join(__dirname, "bower_components")));
+
+//define routes
+
+app.use(require('./Controllers/MapController'));
+
+
+//start the server
 var port = process.env.port || 1337;
-var server = http.createServer(function (req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello World\n');
-});//.listen(port);
-
-
-var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
-var server_host = process.env.YOUR_HOST || '0.0.0.0';
-server.listen(server_port, server_host, function () {
-    console.log('Listening on port %d', server_port);
+app.listen(port, function (req, res) {
+    console.log('listening ' + port);
 });
