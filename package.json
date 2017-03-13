@@ -1,0 +1,9 @@
+{
+  "name": "arcedia",
+  "version": "0.0.0",
+  "description": "arcedia",
+  "main": "server.js",
+  "author": {
+    "name": "hamit.yildirim"
+  }
+}
