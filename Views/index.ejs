@@ -1,60 +1,35 @@
-﻿<!DOCTYPE html>
+﻿<!-- views/pages/index.ejs -->
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Hasel Map</title>
-    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css"/>
-    <style type="text/css">
-        .map-container {
-            position: relative;
-            width: 80%;
-            padding-bottom: 45%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
-        }
-
-      .map-container > * {
-          display: block;
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          margin: 0;
-          padding: 0;
-          height: 100%;
-          width: 80%;
-     }
-
-     .panel-container {
-         position: absolute;
-         top: 0;
-         right: 0;
-         width: 20%;
-         padding-left: 8px;
-     }
-    </style>
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
-
-    <script>
-        function initialize() {
-            var mapProp = {
-                center: new google.maps.LatLng(51.508742, -0.120850),
-                zoom: 5,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-            var map = new google.maps.Map(document.getElementById("map"), mapProp);
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-
+    <% include ../partials/head %>
 </head>
-<body>
+<body class="container">
 
+    <header>
+        <% include ../partials/header %>
+    </header>
 
-    <div id="map" class="map-container"></div>
-    <div id="panel" class="panel-container">asdfasdf</div>
+    <main>
+        <div class="jumbotron">
+            <h1>This is great</h1>
+            <p>Welcome to templating using EJS</p>
+        </div>
+        <h2>Variable</h2>
+        <p><%= tagline %></p>
 
-    <script src="jquery/dist/jquery.min.js"></script>
-    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+        <h2>Loop</h2>
+        <ul>
+            <% drinks.forEach(function(drink) { %>
+        <li><%= drink.name %> - <%= drink.drunkness %></li>
+            <% }); %>
+        </ul>
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+
 </body>
 </html>

@@ -30,18 +30,23 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Controllers\DocController.js" />
     <Compile Include="Controllers\MapController.js" />
-    <Compile Include="Controllers\GoogleMapController.js" />
-    <Compile Include="Controllers\MapController.js" />
+    <Compile Include="Dal\MongoDbProvider.js" />
     <Compile Include="Dal\MsSqlProvider.js" />
     <Compile Include="server.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="Views\About.ejs" />
+    <Content Include="partials\Footer.ejs" />
+    <Content Include="partials\Header.ejs" />
+    <Content Include="partials\Head.ejs" />
     <Content Include="Views\index.ejs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Dal\" />
+    <Folder Include="partials\" />
     <Folder Include="Views\" />
     <Folder Include="typings\" />
     <Folder Include="typings\globals\" />
