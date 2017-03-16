@@ -1,0 +1,35 @@
+﻿<!-- views/pages/about.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container" data-ng-app="arcedia">
+    <form >
+        <header>
+            <% include ../partials/header %>
+        </header>
+
+
+            <div class="row" data-ng-controller="coreController">
+                <div class="col-sm-12">
+                    article name:
+                    <input type="text" ng-model="name">
+                    <br>
+                    <br>
+                    Link:
+                    <input type="text" ng-model="link">
+                    <br>
+                    <br>
+                    <input type="submit" value="Submit" data-ng-click="submit();">
+                </div>
+
+            </div>
+
+        <footer>
+            <% include ../partials/footer %>
+        </footer>
+    </form>
+</body>
+</html>

@@ -1,24 +1,38 @@
-﻿// Retrieve
-var MongoClient = require('mongodb').MongoClient;
+﻿var mongoDb = require('mongodb').MongoClient;
 
-// Connect to the db
-//MongoClient.connect("mongodb://localhost:27017/arcediadb", function (err, db) {
-//    if (!err) {
-//        console.log("We are connected");
-//    }
-//});
+var connectionString = "mongodb://localhost:27017/arcedia";
 
-var URL = "mongodb://localhost:27017/arcediadb";
 
-MongoClient.connect(URL, function (err, db) {
-    if (err) return
-    var results = [];
-    var collection = db.collection('articles');
-    var cursor = collection.find();
-    console.log(cursor);
-    cursor.forEach(function (doc) {
-        results.push(doc);
-        console.log(doc);
-    });
-    console.log("end");
-})
+var MongoRepository = function (connectionString, objectName) {
+    var collection = mongoDb.connect(connectionString, [objectName]);
+
+    this.add = function (value, callback) {
+        collection[objectName].save(value, callback);
+    };
+
+    this.get = function (id, callback) {
+        collection[objectName]
+            .findOne({
+                _id: id
+            }, function (error, document) {
+                callback(document);
+            });
+    };
+
+    this.find = function (query, callback) {
+        collection[objectName].find(query, function (error, documents) {
+            callback(documents);
+        });
+    };
+
+    this.update = function (query, value) {
+        collection[objectName]
+            .update(query, { $set: value }, { multi: true });
+    };
+
+    this.remove = function (query, callback) {
+        collection[objectName].remove(query, callback);
+    };
+};
+
+exports.Repository = MongoRepository;
