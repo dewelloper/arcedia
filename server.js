@@ -19,17 +19,11 @@ app.use(express.static(path.join(__dirname, "bower_components")));
 app.use(express.static(__dirname + '../public'));
 app.use(express.static(__dirname + '../Views'));
 app.use(express.static(__dirname + '../partials'));
-app.use(express.static(__dirname + '../node_modules'));
-app.use(express.static(__dirname + '../app'));
-
 
 //define routes
 app.use(require('./Controllers/ArticleController'));
 
-app.get('*', function (req, res) {
-    const index = path.join(__dirname, 'Views', 'index.ejs');
-    res.render("index");
-});
+
 
 //start the server
 //var port = process.env.port || 1337;

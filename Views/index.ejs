@@ -17,7 +17,11 @@
         </div>
         <h2>Articles</h2>
 
-
+        <ul>
+            <% artcls.forEach(function(article) { %>
+        <li><%= article.id %> - <%= article.name %></li>
+            <% }); %>
+        </ul>
     </main>
 
     <footer>
