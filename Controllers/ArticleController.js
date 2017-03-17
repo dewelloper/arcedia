@@ -10,20 +10,21 @@ var q = require('q');
 
 
 router.get('/', function (req, res) {
-    var articles = [];
+    //var articles = [] = {"id":1,"name":"hmt"};
+    res.render('../Views/index.ejs'); 
 
-    findAllArticles().then(function (nresult) {
-        res.render('../Views/index.ejs', { artcls: articles[0] }); 
-    });
+    //findAllArticles().then(function (nresult) {
+    //    res.render('../Views/index.ejs', { artcls: articles[0] }); 
+    //});
 
-    function findAllArticles() {
-        var deferred = q.defer();
-        arts.find(function (err, docs) {
-            articles.push(docs);
-            deferred.resolve(articles);
-        });
-        return deferred.promise;
-    }
+    //function findAllArticles() {
+    //    var deferred = q.defer();
+    //    arts.find(function (err, docs) {
+    //        articles.push(docs);
+    //        deferred.resolve(articles);
+    //    });
+    //    return deferred.promise;
+    //}
 });
 
 router.get('/about', function (req, res) {
