@@ -8,7 +8,7 @@ var app = express();
 
 //config
 app.set("view engine", 'ejs');
-app.set("views", path.join(__dirname, "/views"));
+app.set("views", path.join(__dirname, "views"));
 app.set("model", path.join(__dirname, "Dal"));
 
 //midleware
@@ -18,12 +18,6 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "bower_components")));
 app.use(express.static(__dirname + '../public'));
 
-var env = process.env.NODE_ENV || 'development';
-if ('development' == env) {
-    app.use(express.static(__dirname + '/app/views'));
-} else {
-    app.use(express.static(__dirname + '/views'));
-}
 
 
 //define routes
