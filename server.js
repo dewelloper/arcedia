@@ -24,7 +24,13 @@ app.use(require('./Controllers/ArticleController'));
 
 
 //start the server
-var port = process.env.port || 1337;
-app.listen(port, function (req, res) {
-    console.log('listening ' + port);
+//var port = process.env.port || 1337;
+//app.listen(port, function (req, res) {
+//    console.log('listening ' + port);
+//});
+
+var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
+var server_host = process.env.YOUR_HOST || '0.0.0.0';
+app.listen(server_port, server_host, function () {
+    console.log('Listening on port %d', server_port);
 });
