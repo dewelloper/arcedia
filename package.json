@@ -21,6 +21,6 @@
     "q": "^1.4.1"
   },
   "scripts": {
-  "start": "node server.js"
+  "start": "node ./Controllers/ArticleController.js"
   }
 }
