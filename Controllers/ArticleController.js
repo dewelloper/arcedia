@@ -8,7 +8,7 @@ var promise = require('promise');
 var q = require('q');
 
 
-router.get('/', function (req, res) {
+router.get('', function (req, res) {
     var articles = [];
     res.render("index.ejs", { artcls: articles});
 
