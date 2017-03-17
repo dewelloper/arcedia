@@ -18,6 +18,9 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "bower_components")));
 app.use(express.static(__dirname + '../public'));
 app.use(express.static(__dirname + '../Views'));
+app.use(express.static(__dirname + '../partials'));
+app.use(express.static(__dirname + '../node_modules'));
+
 
 
 
