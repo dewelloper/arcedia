@@ -8,8 +8,8 @@ var app = express();
 
 //config
 app.set("view engine", 'ejs');
-app.set("views", path.join(__dirname, "views"));
-app.set("model", path.join(__dirname, "Dal"));
+app.set("views", path.join(__dirname, "./views"));
+app.set("model", path.join(__dirname, "./Dal"));
 
 //midleware
 app.use(bodyParser.urlencoded({ extended: true }));
