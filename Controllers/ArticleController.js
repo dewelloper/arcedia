@@ -9,7 +9,7 @@ var q = require('q');
 
 
 
-router.get('/', function (req, res) {
+router.get('*', function (req, res) {
     var articles = [];
     articles.push({ "id": 1, "name": "json" });
     res.render('../Views/index.ejs', { artcls: articles }); 
