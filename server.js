@@ -16,6 +16,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, "bower_components")));
+app.use(express.static(__dirname + '../public'));
+
+var env = process.env.NODE_ENV || 'development';
+if ('development' == env) {
+    app.use(express.static(__dirname + '/app/views'));
+} else {
+    app.use(express.static(__dirname + '/views'));
+}
 
 
 //define routes
@@ -31,6 +39,6 @@ app.use(require('./Controllers/ArticleController'));
 
 var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
 var server_host = process.env.YOUR_HOST || '0.0.0.0';
-app.listen(server_port, server_host, function () {
+app.listen(server_port, server_host, function (req, res) {
     console.log('Listening on port %d', server_port);
 });
