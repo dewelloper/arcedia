@@ -22,8 +22,6 @@ app.use(express.static(__dirname + '../partials'));
 app.use(express.static(__dirname + '../node_modules'));
 
 
-
-
 //define routes
 app.use(require('./Controllers/ArticleController'));
 
