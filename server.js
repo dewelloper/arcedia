@@ -8,7 +8,7 @@ var app = express();
 
 //config
 app.set("view engine", 'ejs');
-app.set("views", path.join(__dirname, "Views"));
+app.set("views", path.join(__dirname, "../app/Views"));
 app.set("model", path.join(__dirname, "Dal"));
 
 //midleware
