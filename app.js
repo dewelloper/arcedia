@@ -8,7 +8,7 @@ var app = express();
 
 //config
 app.set("view engine", 'ejs');
-app.set("views", path.join(__dirname, "../app/Views"));
+app.set("views", path.join(__dirname, "Views"));
 app.set("model", path.join(__dirname, "Dal"));
 
 //midleware
@@ -17,6 +17,7 @@ app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, "bower_components")));
 app.use(express.static(__dirname + '../public'));
+app.use(express.static(__dirname + '../Views'));
 
 
 
