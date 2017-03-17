@@ -11,20 +11,23 @@ var q = require('q');
 
 router.get('/', function (req, res) {
     var articles = [];
+    res.render("index", { artcls: articles});
 
-    findAllArticles().then(function (nresult) {
-        res.render("index", {artcls: nresult[0] });
-    });
+    //var articles = [];
 
-    function findAllArticles() {
-        var deferred = q.defer();
-        arts.find(function (err, docs) {
-            articles.push(docs);
-            deferred.resolve(articles);
-        });
-        //setTimeout(function () { alert("Hello"); }, 3000);
-        return deferred.promise;
-    }
+    //findAllArticles().then(function (nresult) {
+    //    res.render("index", {artcls: nresult[0] });
+    //});
+
+    //function findAllArticles() {
+    //    var deferred = q.defer();
+    //    arts.find(function (err, docs) {
+    //        articles.push(docs);
+    //        deferred.resolve(articles);
+    //    });
+    //    //setTimeout(function () { alert("Hello"); }, 3000);
+    //    return deferred.promise;
+    //}
 });
 
 router.get('/about', function (req, res) {
