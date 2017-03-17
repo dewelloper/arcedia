@@ -10,8 +10,9 @@ var q = require('q');
 
 
 router.get('/', function (req, res) {
-    //var articles = [] = {"id":1,"name":"hmt"};
-    res.render('../Views/index.ejs'); 
+    var articles = [];
+    articles.push({ "id": 1, "name": "json" });
+    res.render('../Views/index.ejs', { artcls: articles }); 
 
     //findAllArticles().then(function (nresult) {
     //    res.render('../Views/index.ejs', { artcls: articles[0] }); 
