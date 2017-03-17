@@ -3,6 +3,7 @@ var path = require("path");
 var bodyParser = require("body-parser");
 
 
+
 var app = express();
 
 //config
@@ -11,7 +12,9 @@ app.set("views", path.join(__dirname, "/views"));
 app.set("model", path.join(__dirname, "Dal"));
 
 //midleware
-app.use(bodyParser());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 app.use(express.static(path.join(__dirname, "bower_components")));
 
 

@@ -20,5 +20,8 @@
     "promise": "^7.1.1",
     "q": "^1.4.1"
   },
-  "devDependencies": { }
+  "devDependencies": { },
+  "script": {
+    "start": "node server.js"
+  }
 }
