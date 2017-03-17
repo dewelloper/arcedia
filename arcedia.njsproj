@@ -12,7 +12,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>091f89c5-0299-42f3-9f16-218216429691</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>app.js</StartupFile>
+    <StartupFile>server.js</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -34,7 +34,7 @@
     <Compile Include="Controllers\MapController.js" />
     <Compile Include="Dal\MongoDbProvider.js" />
     <Compile Include="Dal\MsSqlProvider.js" />
-    <Compile Include="app.js" />
+    <Compile Include="server.js" />
     <Compile Include="Scripts\Angular\app.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
