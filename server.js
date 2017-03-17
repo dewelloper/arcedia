@@ -26,7 +26,10 @@ app.use(express.static(__dirname + '../app'));
 //define routes
 app.use(require('./Controllers/ArticleController'));
 
-
+app.get('*', function (req, res) {
+    const index = path.join(__dirname, 'Views', 'index.ejs');
+    res.render("index");
+});
 
 //start the server
 //var port = process.env.port || 1337;
