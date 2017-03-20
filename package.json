@@ -2,8 +2,8 @@
   "name": "arcedia",
   "version": "0.0.0",
   "engines": {
-    "node": "7.5.0",
-    "npm": "4.4.1"
+    "node": "7.7.3",
+    "npm": "4.1.2"
   },
   "description": "arcedia",
   "main": "server.js",
