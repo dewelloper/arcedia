@@ -35,7 +35,6 @@
     <Compile Include="Dal\MongoDbProvider.js" />
     <Compile Include="Dal\MsSqlProvider.js" />
     <Compile Include="server.js" />
-    <Compile Include="Scripts\Angular\app.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="Views\insertarticle.ejs" />
@@ -50,7 +49,6 @@
     <Folder Include="Dal\" />
     <Folder Include="Scripts\" />
     <Folder Include="partials\" />
-    <Folder Include="Scripts\Angular\" />
     <Folder Include="Views\" />
     <Folder Include="typings\" />
     <Folder Include="typings\globals\" />
