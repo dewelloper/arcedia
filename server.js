@@ -26,7 +26,8 @@ app.use(require('./Controllers/ArticleController'));
 app.get('/', function (req, res) {
     var articles = [];
     articles.push({ "id": 1, "name": "json" });
-    res.render('../Views/index.ejs', { artcls: articles });
+    const index = path.join(__dirname, 'build', '../Views/index.ejs');
+    res.render(index, { artcls: articles });
 
     //findAllArticles().then(function (nresult) {
     //    res.render('../Views/index.ejs', { artcls: articles[0] }); 
