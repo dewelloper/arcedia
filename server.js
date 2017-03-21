@@ -23,7 +23,24 @@ app.use(express.static(__dirname + '../partials'));
 //define routes
 app.use(require('./Controllers/ArticleController'));
 
+app.get('/', function (req, res) {
+    var articles = [];
+    articles.push({ "id": 1, "name": "json" });
+    res.render('../Views/index.ejs', { artcls: articles });
 
+    //findAllArticles().then(function (nresult) {
+    //    res.render('../Views/index.ejs', { artcls: articles[0] }); 
+    //});
+
+    //function findAllArticles() {
+    //    var deferred = q.defer();
+    //    arts.find(function (err, docs) {
+    //        articles.push(docs);
+    //        deferred.resolve(articles);
+    //    });
+    //    return deferred.promise;
+    //}
+});
 
 //start the server
 //var port = process.env.port || 1337;
