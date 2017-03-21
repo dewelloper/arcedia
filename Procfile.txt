@@ -1,1 +1,1 @@
-web: node ./Controllers/ArticleController.js
+web: node server.js
