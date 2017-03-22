@@ -1,0 +1,2 @@
+D:\GitHub\arcedia\obj\Debug\arcedia.njsprojResolveAssemblyReference.cache
+D:\GitHub\arcedia\bin\Microsoft.NodejsTools.WebRole.dll
