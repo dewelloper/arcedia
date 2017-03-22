@@ -19,6 +19,8 @@ app.use(express.static(path.join(__dirname, "bower_components")));
 app.use(express.static(__dirname + '../public'));
 app.use(express.static(__dirname + '../Views'));
 app.use(express.static(__dirname + '../partials'));
+app.use(express.static(__dirname + '../app/node_modules/ejs/lib'));
+path.join(__dirname, 'app', 'partials', 'head.ejs');
 
 //define routes
 app.use(require('./Controllers/ArticleController'));
