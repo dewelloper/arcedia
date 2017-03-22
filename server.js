@@ -22,6 +22,7 @@ app.use(express.static(__dirname + '../partials'));
 app.use(express.static(__dirname + '../node_modules/ejs/lib'));
 path.join(__dirname, 'partials', 'head.ejs');
 
+
 //define routes
 app.use(require('./Controllers/ArticleController'));
 
