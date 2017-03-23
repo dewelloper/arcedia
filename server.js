@@ -20,8 +20,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //app.use(express.static(path.join(__dirname, "bower_components")));
-//app.use(express.static(__dirname + 'partials'));
-//app.use(express.static(__dirname + 'node_modules/ejs/lib'));
+app.use(express.static(__dirname + 'partials'));
+app.use(express.static(__dirname + 'node_modules/ejs/lib'));
 
 
 //define routes
