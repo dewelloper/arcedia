@@ -421,6 +421,7 @@
     <Compile Include="node_modules\xtend\mutable.js" />
     <Compile Include="node_modules\xtend\test.js" />
     <Compile Include="server.js" />
+    <Compile Include="Web.js" />
     <Content Include="node_modules\.bin\mime" />
     <Content Include="node_modules\.bin\mime.cmd" />
     <Content Include="node_modules\accepts\HISTORY.md" />
