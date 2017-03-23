@@ -420,7 +420,9 @@
     <Compile Include="node_modules\xtend\immutable.js" />
     <Compile Include="node_modules\xtend\mutable.js" />
     <Compile Include="node_modules\xtend\test.js" />
-    <Compile Include="server.js" />
+    <Compile Include="..\server.js">
+      <Link>server.js</Link>
+    </Compile>
     <Content Include="node_modules\.bin\mime" />
     <Content Include="node_modules\.bin\mime.cmd" />
     <Content Include="node_modules\accepts\HISTORY.md" />
@@ -1051,7 +1053,6 @@
     <Folder Include="node_modules\xtend\" />
     <Folder Include="Scripts\" />
     <Folder Include="partials\" />
-    <Folder Include="typings\globals\grunt\" />
     <Folder Include="Views\" />
     <Folder Include="typings\" />
     <Folder Include="typings\globals\" />
@@ -1059,7 +1060,6 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="node_modules\iconv-lite\lib\index.d.ts" />
-    <TypeScriptCompile Include="typings\globals\grunt\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
     <TypeScriptCompile Include="typings\index.d.ts" />
   </ItemGroup>

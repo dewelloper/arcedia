@@ -1,4 +1,4 @@
 D:\GitHub\arcedia\obj\Debug\arcedia.njsprojResolveAssemblyReference.cache
 D:\GitHub\arcedia\bin\Microsoft.NodejsTools.WebRole.dll
-C:\Users\hamit.yildirim\Documents\GitHub\arcedia\arcedia\obj\Debug\arcedia.njsprojResolveAssemblyReference.cache
-C:\Users\hamit.yildirim\Documents\GitHub\arcedia\arcedia\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\hamit.yildirim\Documents\GitHub\arcedia\obj\Debug\arcedia.njsprojResolveAssemblyReference.cache
+C:\Users\hamit.yildirim\Documents\GitHub\arcedia\bin\Microsoft.NodejsTools.WebRole.dll
