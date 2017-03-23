@@ -60,3 +60,6 @@ var server_host = process.env.YOUR_HOST || '0.0.0.0';
 app.listen(server_port, server_host, function (req, res) {
     console.log('Listening on port %d', server_port);
 });
+
+
+//https://github.com/joemccann/dillinger/issues/514
